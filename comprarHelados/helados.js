@@ -79,7 +79,7 @@ else if (dineroPedro >= 800 && dineroPedro < 900){
     alert("comprate el helado pote mediano");
     alert("y te sobran" + (dineroPedro - 800));    
 }
-else if (dineroPedro >= 900){
+else if (dineroPedro >= 600){
     alert("comprate el helado pote mediano y otro mas");
 } else {
     alert("lo siento, no te alcanza para comprar");
@@ -112,7 +112,7 @@ else if (dineroRoberto >= 800 && dineroRoberto < 900){
     alert("comprate el helado pote mediano");
     alert("y te sobran" + (dineroPedro - 800));    
 }
-else if (dineroRoberto >= 900){
+else if (dineroRoberto >= 400){
     alert("comprate el helado pote mediano y otro mas");
 } else {
     alert("lo siento, no te alcanza para comprar");

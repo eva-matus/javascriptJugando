@@ -35,5 +35,4 @@ for (alumno in alumnosTotales) {
         }
 
         document.write(resultado)
-
 }
