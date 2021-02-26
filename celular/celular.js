@@ -18,28 +18,44 @@ class celulares {
             alert("celular apagado");
             this.encendido = true;
         } else {
-            alert("el celular ya esta encendido")
+            alert("el celular ya esta encendido");
         }
     }
     reiniciar(){
         if (this.encendido == true){
             alert("reiniciar celular");
         } else {
-            alert("el celular esta apagado")
+            alert("el celular esta apagado");
         }
     }
     tomarFoto(){
-        alert(`foto tomada en una resolucion de: ${this.resolucionDeCamara}`)
+        alert(`foto tomada en una resolucion de: ${this.resolucionDeCamara}`);
     }
     grabandoVideo(){
-        alert(`grabando video en ${this.resolucionDeCamara}`)
+        alert(`grabando video en ${this.resolucionDeCamara}`);
+    }
+    mobileInfo(){
+        return `
+        Color: <b>${this.color}</b><br></br>
+        Peso: <b>${this.peso}</b><br></br>
+        Resolucion de Pantalla: <b>${this.resolucionDePantalla}</b><br></br>
+        Resolucion de Camara:<b>${this.resolucionDeCamara}</b><br></br>
+        Memoria Ram: <b>${this.memoriaRam}</b><br></br>
+        `;
     }
 }
 
 celular1 = new celulares("rojo", "150gr", "5'", "full HD", "2GB");
+celular2 = new celulares("negro", "200gr", "6", "full Hd", "4GB");
+celular3 = new celulares("blanco", "100gr", "6", "full Hd", "6GB");
+//celular1.presionarBotonEncendido();
+//celular1.tomarFoto();
+//celular1.grabandoVideo();
+//celular1.reiniciar();
+//celular1.presionarBotonEncendido();
 
-celular1.presionarBotonEncendido();
-celular1.tomarFoto();
-celular1.grabandoVideo();
-celular1.reiniciar();
-celular1.presionarBotonEncendido();
+document.write(`
+    ${celular1.mobileInfo()} <br>
+    ${celular2.mobileInfo()} <br>
+    ${celular3.mobileInfo()} <br>
+`);
