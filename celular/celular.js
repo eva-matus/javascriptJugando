@@ -45,6 +45,20 @@ class celulares {
     }
 }
 
+class celularAltaGama {
+    constructor(color, peso, rdp, rdc, ram, rdce){
+        super(color,peso,resolucionDePantalla, rdc,ram);
+        this.resolucionDeCamaraExtra = rdce;
+    }
+    grabarVideoLento(){
+        alert("estas grabando en camara lenta");
+
+    }
+    reconocimientoFacial(){
+        alert("vamos a iniciar un reconocimiento facial");
+    }
+}
+
 celular1 = new celulares("rojo", "150gr", "5'", "full HD", "2GB");
 celular2 = new celulares("negro", "200gr", "6", "full Hd", "4GB");
 celular3 = new celulares("blanco", "100gr", "6", "full Hd", "6GB");
@@ -59,3 +73,9 @@ document.write(`
     ${celular2.mobileInfo()} <br>
     ${celular3.mobileInfo()} <br>
 `);
+
+// -Implementar: ademas el cliente necesita 2 celulares de alta gama
+// que pueda hacer lo que los dems celulares anteriores pero con mejor caracteristicas,
+//grabar en camara lenta, reconocimiento facial, y una camara extra
+// Implementar: todas estas cualidades en los celulares de gama alta
+
