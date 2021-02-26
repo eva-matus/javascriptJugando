@@ -45,7 +45,7 @@ class celulares {
     }
 }
 
-class celularAltaGama {
+class celularAltaGama extends celulares{
     constructor(color, peso, rdp, rdc, ram, rdce){
         super(color,peso,resolucionDePantalla, rdc,ram);
         this.resolucionDeCamaraExtra = rdce;
@@ -59,23 +59,31 @@ class celularAltaGama {
     }
 }
 
-celular1 = new celulares("rojo", "150gr", "5'", "full HD", "2GB");
-celular2 = new celulares("negro", "200gr", "6", "full Hd", "4GB");
-celular3 = new celulares("blanco", "100gr", "6", "full Hd", "6GB");
+//celular1 = new celulares("rojo", "150gr", "5'", "full HD", "2GB");
+//celular2 = new celulares("negro", "200gr", "6", "full Hd", "4GB");
+//celular3 = new celulares("blanco", "100gr", "6", "full Hd", "6GB");
+
 //celular1.presionarBotonEncendido();
 //celular1.tomarFoto();
 //celular1.grabandoVideo();
 //celular1.reiniciar();
 //celular1.presionarBotonEncendido();
-
-document.write(`
-    ${celular1.mobileInfo()} <br>
-    ${celular2.mobileInfo()} <br>
-    ${celular3.mobileInfo()} <br>
-`);
+//
+//document.write(`
+//    ${celular1.mobileInfo()} <br>
+//    ${celular2.mobileInfo()} <br>
+//    ${celular3.mobileInfo()} <br>
+//`);
 
 // -Implementar: ademas el cliente necesita 2 celulares de alta gama
 // que pueda hacer lo que los dems celulares anteriores pero con mejor caracteristicas,
 //grabar en camara lenta, reconocimiento facial, y una camara extra
 // Implementar: todas estas cualidades en los celulares de gama alta
 
+celular1 = new celularAltaGama("rojo", "120gr.", "5.6", "4k", "6GB", "full Hd");
+celular2= new celularAltaGama("negro", "130gr", "6", "8k", "Hd");
+
+document.wwrite(`
+${celular1.infoAltaGama()} <br>
+${celular2.infoAltaGama()} <br>
+`);
