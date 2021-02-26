@@ -1,4 +1,4 @@
-class animal {
+class Animal {
     constructor(especie,edad,color){
         this.especie = especie;
         this.edad = edad;
@@ -11,14 +11,16 @@ class animal {
     }
 }
 
-let perro = new animal("perro", 5, "cafe");
-let gato = new animal("gato", 3, "blanco");
-let pajaro = new animal("pajaro", 2, "verde");
+class Perro extends Animal {
+    constructor(especie,edad,color,raza){
+        super(especie,edad,color);
+        this.raza = raza;
+    }
+}
 
-
-//document.write(perro.info + "<br>")
-//document.write(gato.info + "<br>")
-//document.write(pajaro.info + "<br>")
+let perro = new Perro("perro", 5, "cafe", "pitbull");
+let gato = new Animal("gato", 3, "blanco");
+let pajaro = new Animal("pajaro", 2, "verde");
 
 perro.verInfo();
 gato.verInfo();
